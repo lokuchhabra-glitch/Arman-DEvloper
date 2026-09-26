@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Gallery | Arman.dev - Teammates & Collaborators</title>
+    <meta name="description" content="Explore the creative minds and talented developers behind our team at BBIT CSE. Interactive animated member gallery with complete profiles.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <script src="member-access.js"></script>
+</head>
+<body>
+
+    <!-- Ambient Floating Glowing Orbs -->
+    <div class="gallery-bg-glow" aria-hidden="true">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <!-- Animated Brand Section -->
+            <a href="index.html" class="nav-brand" title="Return to Home Portfolio">
+                <div class="logo-ring">
+                    <img src="logo.png" class="logo-img" alt="Arman's Brand Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Arman<span class="brand-dot">.dev</span></span>
+                    <span class="brand-tagline"><span class="live-dot"></span> Team Gallery</span>
+                </div>
+            </a>
+
+            <!-- Navbar Links -->
+            <div class="right">
+                <ul>
+                    <li><a href="index.html#firstsection" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="index.html#about-section" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="index.html#skills-section" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+                    <li><a href="index.html#contact-section" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                    <li><a href="members.html" class="nav-link active" style="color: #38bdf8; font-weight: 600;"><i class="fa-solid fa-users"></i> Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Navbar CTA Button -->
+            <div class="nav-action">
+                <a href="index.html" class="nav-btn-contact"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="gallery-wrapper">
+
+        <!-- Hero Section -->
+        <section class="gallery-hero">
+            <div class="gallery-badge">
+                <i class="fa-solid fa-sparkles"></i> Innovators & Collaborators
+            </div>
+            <h1 class="gallery-title">
+                Meet Our Talented <span class="gradient-text">Teammates</span>
+            </h1>
+            <p class="gallery-subtitle">
+                Passionate computer science engineers, creative developers, and problem solvers working together to build impactful digital solutions at BBIT.
+            </p>
+
+            <!-- Live Team Stats Bar -->
+            <div class="team-stats-bar">
+                <div class="stat-pill">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                    <span><strong>8</strong> Active Teammates</span>
+                </div>
+                <div class="stat-pill">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span><strong>CSE</strong> Department</span>
+                </div>
+                <div class="stat-pill">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span><strong>BBIT</strong> Campus</span>
+                </div>
+                <div class="stat-pill">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span><strong>Click Cards</strong> for Full Bio</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Category Filters -->
+        <section class="gallery-controls">
+            <!-- Search Box -->
+            <div class="search-box-wrapper">
+                <input type="text" id="memberSearchInput" class="search-input" placeholder="Search by name, role, skill, or keyword..." aria-label="Search teammates">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="filter-pills" id="filterPillsContainer">
+                <button class="filter-btn active" data-category="all"><i class="fa-solid fa-layer-group"></i> All Members (8)</button>
+                <button class="filter-btn" data-category="lead"><i class="fa-solid fa-crown"></i> Team Lead</button>
+                <button class="filter-btn" data-category="frontend"><i class="fa-solid fa-palette"></i> Frontend & UI</button>
+                <button class="filter-btn" data-category="backend"><i class="fa-solid fa-server"></i> Backend & Logic</button>
+            </div>
+        </section>
+
+        <!-- Team Gallery Grid -->
+        <section class="team-gallery-grid" id="teamGalleryGrid">
+
+            <!-- Member 1: Arman Hussain -->
+            <article class="member-card" 
+                     data-id="1"
+                     data-name="Arman Hussain"
+                     data-role="Lead Developer & Portfolio Architect"
+                     data-category="lead"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="ar.png"
+                     data-tag="Team Lead"
+                     data-tag-color="#f59e0b"
+                     data-bio="Lead developer and software architect creating modern web experiences, interactive graphics, and robust software systems. Passionate about full-stack engineering and innovative design."
+                     data-skills="C, HTML5, CSS3, JavaScript, UI/UX Design, Git, Web Architecture"
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="arman@example.com">
+                <div class="card-media">
+                    <img src="ar.png" alt="Arman Hussain" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#f59e0b; box-shadow:0 0 8px #f59e0b;"></span>
+                        <span>Team Lead</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Arman Hussain
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-role"><i class="fa-solid fa-shield-halved"></i> Lead Developer</div>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <div class="card-skill-chips">
+                        <span class="chip">Full Stack</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">UI/UX</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Arman Hussain's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 2: Humayun Parwez -->
+            <article class="member-card" 
+                     data-id="2"
+                     data-name="Humayun Parwez"
+                     data-category="frontend"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="hu.jpeg"
+                     data-tag="Core Member"
+                     data-tag-color="#38bdf8"
+                     data-bio="Enthusiastic Computer Science engineer specializing in modern web interfaces, responsive styling, and core systems programming. Constantly experimenting with modern tech stacks."
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="humayun@example.com">
+                <div class="card-media">
+                    <img src="hu.jpeg" alt="Humayun Parwez" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot"></span>
+                        <span>Core Member</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Humayun Parwez
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Humayun Parwez's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 3: Ena Rushan -->
+            <article class="member-card" 
+                     data-id="3"
+                     data-name="Ena Rushan"
+                     data-category="frontend"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="en.jpeg"
+                     data-tag="Design & UI"
+                     data-tag-color="#ec4899"
+                     data-bio="Creative software engineer with a deep passion for elegant user interfaces, accessible web design, and structured programming paradigms."
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="enarushan@example.com">
+                <div class="card-media">
+                    <img src="en.jpeg" alt="Ena Rushan" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#ec4899; box-shadow:0 0 8px #ec4899;"></span>
+                        <span>Design & UI</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Ena Rushan
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Ena Rushan's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 4: Kushal Jha -->
+            <article class="member-card" 
+                     data-id="4"
+                     data-name="Kushal Jha"
+                     data-category="backend"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="KUU.png"
+                     data-tag="Logic & DSA"
+                     data-tag-color="#10b981"
+                     data-bio="Algorithm enthusiast focused on competitive programming, data structures, and backend computational logic. Loves solving challenging algorithmic problems."
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="kushal@example.com">
+                <div class="card-media">
+                    <img src="KUU.png" alt="Kushal Jha" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#10b981; box-shadow:0 0 8px #10b981;"></span>
+                        <span>Logic & DSA</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Kushal Jha
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Kushal Jha's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 5: Sharique Husain -->
+            <article class="member-card" 
+                     data-id="5"
+                     data-name="Sharique Husain"
+                     data-category="backend"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="sh.jpeg"
+                     data-tag="Core Tech"
+                     data-tag-color="#6366f1"
+                     data-bio="Passionate engineer exploring full stack architectures, relational databases, and clean modular code for scalable web platforms."
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="sharique@example.com">
+                <div class="card-media">
+                    <img src="sh.jpeg" alt="Sharique Husain" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#6366f1; box-shadow:0 0 8px #6366f1;"></span>
+                        <span>Core Tech</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Sharique Husain
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Sharique Husain's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 6: Ali Afreen -->
+            <article class="member-card" 
+                     data-id="6"
+                     data-name="Ali Afreen"
+                     data-category="frontend"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="AFF.png"
+                     data-tag="Tech Explorer"
+                     data-tag-color="#14b8a6"
+                     data-bio="Curious and dedicated developer interested in modern web frameworks, system utilities, and building reliable software for real-world applications."
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="aliafreen@example.com">
+                <div class="card-media">
+                    <img src="AFF.png" alt="Ali Afreen" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#14b8a6; box-shadow:0 0 8px #14b8a6;"></span>
+                        <span>Tech Explorer</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Ali Afreen
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Ali Afreen's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 7: Anurag Shaw -->
+            <article class="member-card" 
+                     data-id="7"
+                     data-name="Anurag Shaw"
+                     data-category="backend"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="ANU.png"
+                     data-tag="Core Member"
+                     data-tag-color="#8b5cf6"
+                     data-bio="Passionate CSE student focused on algorithmic thinking, clean code practices, and exploring cutting-edge computing paradigms."
+                     data-github="https://github.com"
+                     data-linkedin="https://linkedin.com"
+                     data-email="anurag@example.com">
+                <div class="card-media">
+                    <img src="ANU.png" alt="Anurag Shaw" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#8b5cf6; box-shadow:0 0 8px #8b5cf6;"></span>
+                        <span>Core Member</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Anurag Shaw
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Anurag Shaw's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+            <!-- Member 8: Gitanjli -->
+            <article class="member-card"
+                     data-id="8"
+                     data-name="Gitanjli"
+                     data-category="all"
+                     data-dept="Computer Science & Engineering"
+                     data-college="Budge Budge Institute of Technology (BBIT)"
+                     data-image="geet.jpeg"
+                     data-tag="Team Member"
+                     data-tag-color="#14b8a6"
+                     data-bio="Gitanjli is a member of the CSE team at BBIT."
+                     >
+                <div class="card-media">
+                    <img src="geet.jpeg" alt="Gitanjli" class="member-photo" loading="lazy">
+                    <div class="card-overlay"></div>
+                    <div class="card-top-tag">
+                        <span class="pulse-dot" style="background:#14b8a6; box-shadow:0 0 8px #14b8a6;"></span>
+                        <span>Team Member</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h2 class="member-name">
+                        Gitanjli
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </h2>
+                    <div class="member-dept-badge">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>CSE • BBIT</span>
+                    </div>
+                    <button class="card-action-btn" type="button" aria-label="View Gitanjli's Profile">
+                        <i class="fa-solid fa-id-card"></i> View Profile Details
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- No Results Feedback Container -->
+        <div id="noResultsState" class="no-results" style="display: none;">
+            <i class="fa-solid fa-user-slash"></i>
+            <h3>No teammates found</h3>
+            <p>Try searching for a different name, role, or clearing the filter.</p>
+        </div>
+
+    </main>
+
+    <!-- Interactive Member Details Modal -->
+    <div id="memberModalOverlay" class="member-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="member-modal-container">
+            <!-- Close Button -->
+            <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close Member Profile Dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Hero Top Banner -->
+            <div class="modal-hero-banner"></div>
+
+            <!-- Profile Avatar & Details Header -->
+            <div class="modal-profile-header">
+                <div class="modal-avatar-ring">
+                    <img id="modalAvatar" src="ar.png" alt="Teammate Profile" class="modal-avatar-img">
+                </div>
+                <div class="modal-header-text">
+                    <h2 id="modalName" class="modal-member-name">
+                        <span>Arman Hussain</span>
+                        <i class="fa-solid fa-circle-check modal-verified-badge" title="Verified Teammate"></i>
+                    </h2>
+                    <div id="modalRole" class="modal-member-role">Lead Developer & Portfolio Architect</div>
+                    <div class="modal-badges-row">
+                        <span id="modalDeptBadge" class="modal-badge"><i class="fa-solid fa-microchip"></i> CSE</span>
+                        <span id="modalCollegeBadge" class="modal-badge college-badge"><i class="fa-solid fa-graduation-cap"></i> BBIT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Body Content -->
+            <div class="modal-body-content">
+                <!-- About Section -->
+                <div>
+                    <h3 class="modal-section-title"><i class="fa-solid fa-quote-left"></i> About Teammate</h3>
+                    <p id="modalBio" class="modal-bio-text">
+                        Passionate software developer focused on modern web engineering and innovative software solutions.
+                    </p>
+                </div>
+
+                <!-- Skills & Technologies -->
+                <div id="modalSkillsSection">
+                    <h3 class="modal-section-title"><i class="fa-solid fa-cubes-stacked"></i> Technical Skills & Focus Areas</h3>
+                    <div id="modalSkillsList" class="modal-skills-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Academic Info -->
+                <div>
+                    <h3 class="modal-section-title"><i class="fa-solid fa-university"></i> Academic Information</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6;">
+                        <strong style="color: #ffffff;">Institution:</strong> <span id="modalCollegeFull">Budge Budge Institute of Technology (BBIT)</span><br>
+                        <strong style="color: #ffffff;">Department:</strong> <span id="modalDeptFull">Computer Science & Engineering</span><br>
+                        <strong style="color: #ffffff;">Degree:</strong> Bachelor of Technology (B.Tech)
+                    </p>
+                </div>
+
+                <!-- Actions & Connect Row -->
+                <div class="modal-actions-row">
+                    <!-- Social Links -->
+                    <div class="modal-social-links">
+                        <a id="modalGithubLink" href="https://github.com" target="_blank" rel="noopener noreferrer" class="modal-social-btn" title="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a id="modalLinkedinLink" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="modal-social-btn" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a id="modalEmailLink" href="mailto:info@example.com" class="modal-social-btn" title="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <button id="copyProfileBtn" class="modal-social-btn" title="Copy Teammate Info" type="button">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+
+                    <!-- Previous / Next Navigation inside modal -->
+                    <div class="modal-nav-controls">
+                        <button id="modalPrevBtn" class="modal-nav-btn" type="button">
+                            <i class="fa-solid fa-chevron-left"></i> Prev
+                        </button>
+                        <button id="modalNextBtn" class="modal-nav-btn" type="button">
+                            Next <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="galleryToast" class="gallery-toast" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Information copied to clipboard!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025-2029 Arman Hussain & CSE BBIT Team. All rights reserved.</p>
+        <p style="margin-top: 8px; font-size: 0.82rem; color: #94a3b8;">
+            Crafted with passion, modern animations, and responsive design.
+        </p>
+    </footer>
+
+    <!-- Interactive Scripts for Gallery, 3D Tilt, Filters, & Modal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = Array.from(document.querySelectorAll('.member-card'));
+            const modalOverlay = document.getElementById('memberModalOverlay');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
+            const searchInput = document.getElementById('memberSearchInput');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const noResultsState = document.getElementById('noResultsState');
+            const toast = document.getElementById('galleryToast');
+            const toastMessage = document.getElementById('toastMessage');
+
+            // Modal elements
+            const modalAvatar = document.getElementById('modalAvatar');
+            const modalName = document.getElementById('modalName');
+            const modalRole = document.getElementById('modalRole');
+            const modalSkillsSection = document.getElementById('modalSkillsSection');
+            const modalDeptBadge = document.getElementById('modalDeptBadge');
+            const modalCollegeBadge = document.getElementById('modalCollegeBadge');
+            const modalBio = document.getElementById('modalBio');
+            const modalSkillsList = document.getElementById('modalSkillsList');
+            const modalCollegeFull = document.getElementById('modalCollegeFull');
+            const modalDeptFull = document.getElementById('modalDeptFull');
+            const modalGithubLink = document.getElementById('modalGithubLink');
+            const modalLinkedinLink = document.getElementById('modalLinkedinLink');
+            const modalEmailLink = document.getElementById('modalEmailLink');
+            const modalPrevBtn = document.getElementById('modalPrevBtn');
+            const modalNextBtn = document.getElementById('modalNextBtn');
+            const copyProfileBtn = document.getElementById('copyProfileBtn');
+
+            let currentMemberIndex = 0;
+            let visibleCards = [...cards];
+
+            // ----------------------------------------------------
+            // 1. Interactive 3D Tilt Effect on Cards
+            // ----------------------------------------------------
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left; // x position within element
+                    const y = e.clientY - rect.top;  // y position within element
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = ((y - centerY) / centerY) * -9; // Max 9 deg rotation
+                    const rotateY = ((x - centerX) / centerX) * 9;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+
+                // Click to open modal
+                card.addEventListener('click', () => {
+                    const id = parseInt(card.getAttribute('data-id'), 10);
+                    openMemberModal(id);
+                });
+            });
+
+            // ----------------------------------------------------
+            // 2. Member Modal Functions
+            // ----------------------------------------------------
+            function openMemberModal(cardId) {
+                const card = cards.find(c => parseInt(c.getAttribute('data-id'), 10) === cardId);
+                if (!card) return;
+
+                currentMemberIndex = cards.indexOf(card);
+                populateModal(card);
+
+                modalOverlay.classList.add('active');
+                modalOverlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+
+            function populateModal(card) {
+                const name = card.getAttribute('data-name');
+                const role = card.getAttribute('data-role') || '';
+                const dept = card.getAttribute('data-dept');
+                const college = card.getAttribute('data-college');
+                const image = card.getAttribute('data-image');
+                const bio = card.getAttribute('data-bio');
+                const skills = (card.getAttribute('data-skills') || '').split(',').map(s => s.trim()).filter(Boolean);
+                const github = card.getAttribute('data-github') || '#';
+                const linkedin = card.getAttribute('data-linkedin') || '#';
+                const email = card.getAttribute('data-email') || '';
+
+                modalAvatar.src = image;
+                modalAvatar.alt = name;
+                modalName.querySelector('span').textContent = name;
+                modalRole.textContent = role;
+                modalRole.hidden = !role;
+                modalSkillsSection.hidden = skills.length === 0;
+                modalDeptBadge.innerHTML = `<i class="fa-solid fa-microchip"></i> CSE`;
+                modalCollegeBadge.innerHTML = `<i class="fa-solid fa-graduation-cap"></i> BBIT`;
+                modalBio.textContent = bio;
+                modalCollegeFull.textContent = college;
+                modalDeptFull.textContent = dept;
+
+                modalGithubLink.href = github;
+                modalLinkedinLink.href = linkedin;
+                modalEmailLink.href = `mailto:${email}`;
+
+                // Populate Skills
+                modalSkillsList.innerHTML = '';
+                skills.forEach(skill => {
+                    const pill = document.createElement('span');
+                    pill.className = 'modal-skill-pill';
+                    pill.innerHTML = `<i class="fa-solid fa-code"></i> ${skill}`;
+                    modalSkillsList.appendChild(pill);
+                });
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+                modalOverlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            // Close events
+            modalCloseBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            // Modal Prev / Next Navigation
+            modalPrevBtn.addEventListener('click', () => {
+                currentMemberIndex = (currentMemberIndex - 1 + cards.length) % cards.length;
+                populateModal(cards[currentMemberIndex]);
+            });
+
+            modalNextBtn.addEventListener('click', () => {
+                currentMemberIndex = (currentMemberIndex + 1) % cards.length;
+                populateModal(cards[currentMemberIndex]);
+            });
+
+            // Copy Profile / Share Toast
+            copyProfileBtn.addEventListener('click', () => {
+                const currentCard = cards[currentMemberIndex];
+                const name = currentCard.getAttribute('data-name');
+                const role = currentCard.getAttribute('data-role');
+                const textToCopy = `${name}${role ? ` - ${role}` : ''} (${currentCard.getAttribute('data-dept')}, ${currentCard.getAttribute('data-college')})`;
+                
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        showToast(`Copied ${currentCard.getAttribute('data-name')}'s info to clipboard!`);
+                    }).catch(() => {
+                        showToast('Teammate profile details ready!');
+                    });
+                } else {
+                    showToast(`Selected: ${currentCard.getAttribute('data-name')}`);
+                }
+            });
+
+            function showToast(msg) {
+                toastMessage.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            // ----------------------------------------------------
+            // 3. Search and Category Filter Logic
+            // ----------------------------------------------------
+            let activeCategory = 'all';
+
+            function filterTeammates() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let matchCount = 0;
+
+                cards.forEach(card => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const role = (card.getAttribute('data-role') || '').toLowerCase();
+                    const skills = (card.getAttribute('data-skills') || '').toLowerCase();
+                    const category = card.getAttribute('data-category');
+
+                    const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+                    const matchesSearch = !searchTerm || name.includes(searchTerm) || role.includes(searchTerm) || skills.includes(searchTerm);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = 'flex';
+                        matchCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (matchCount === 0) {
+                    noResultsState.style.display = 'block';
+                } else {
+                    noResultsState.style.display = 'none';
+                }
+            }
+
+            // Search input live filtering
+            searchInput.addEventListener('input', filterTeammates);
+
+            // Filter button click handler
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.getAttribute('data-category');
+                    filterTeammates();
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
